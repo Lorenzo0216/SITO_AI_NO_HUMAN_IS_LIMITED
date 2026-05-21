@@ -1,0 +1,673 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: -apple-system, Arial;
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(10,10,10,0.6);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 40px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00f7ff;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 14px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #00f7ff;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 60px;
+}
+
+/* ================= SEZIONI BASE ================= */
+section {
+    padding: 140px 60px;
+}
+
+/* 🔥 TITOLI SEZIONE GLOBALI */
+.section-title {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+
+    color: #ffffff;
+    position: relative;
+}
+
+/* linea elegante sotto titolo */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-top: 12px;
+    background: #00f7ff;
+}
+
+/* ================= SIGNIFICATO ================= */
+.meaning-section {
+    display: flex;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.meaning-left {
+    width: 60%;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.meaning-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.meaning-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.9));
+}
+
+.meaning-right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.meaning-text {
+    max-width: 420px;
+}
+
+.meaning-text h2 {
+    font-size: 38px;
+    color: #00f7ff;
+    margin-bottom: 25px;
+}
+
+.meaning-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d6d6d6;
+    text-align: justify;
+}
+
+/* ================= SHOES ================= */
+.shoes-section {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.shoes-left {
+    width: 40%;
+}
+
+/* titolo scarpe coerente */
+.shoes-left h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.shoes-left h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #00f7ff;
+    margin-top: 12px;
+}
+
+.shoes-quote {
+    margin-top: 160px;
+    font-style: italic;
+    color: #aaa;
+    border-left: 2px solid #00f7ff;
+    padding-left: 12px;
+}
+
+.shoes-right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shoe-card {
+    height: 240px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+}
+
+.shoe-card:hover {
+    transform: scale(1.05);
+}
+
+.shoe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= SHOES CARD TEXT (HOME FIX) ================= */
+.shoe-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.92), transparent);
+    display: flex;
+    align-items: flex-end;
+
+    /* 👇 COERENZA CON TESTI SITO */
+    padding: 18px 22px;
+}
+
+.shoe-overlay p {
+    font-size: 16px;
+    color: #cfcfcf;
+    line-height: 1.6;
+
+    text-align: left;
+    margin: 0;
+
+    /* 👇 ALLINEAMENTO PIÙ “GARE STYLE” */
+    border-left: 2px solid rgba(0,247,255,0.35);
+    padding-left: 12px;
+}
+.shoe-card:hover .shoe-overlay {
+    opacity: 1;
+}
+/* ================= SHOES LIST (HOME FIX) ================= */
+.shoes-list {
+    margin-top: 20px;
+    padding-left: 18px;
+
+    border-left: 2px solid rgba(0,247,255,0.35);
+}
+
+.shoes-list p {
+    margin: 8px 0;
+    color: #cfcfcf;
+    font-size: 15px;
+    line-height: 1.6;
+
+    text-align: left;
+}
+
+/* ================= RECORD ================= */
+.records {
+    background: #050505;
+}
+
+/* titolo record coerente */
+.records h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.records h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #00f7ff;
+    margin-top: 12px;
+}
+
+.records-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.record-card {
+    min-width: 340px;
+    height: 240px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.record-card:hover {
+    transform: scale(1.06);
+}
+
+.record-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.95));
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+/* ================= ANIMATION ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= GARA SECTION ================= */
+.gara-section {
+    padding: 120px 60px;
+}
+
+/* grid record */
+.gara-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* card */
+.gara-card {
+    flex: 1;
+    min-width: 280px;
+    height: 350px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+}
+
+.gara-card:hover {
+    transform: scale(1.03);
+}
+
+.gara-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+/* info sopra immagine */
+.gara-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.95)
+    );
+}
+
+.gara-info h3 {
+    font-size: 18px;
+}
+
+.gara-info p {
+    font-size: 22px;
+    color: #00f7ff;
+    margin-top: 5px;
+}
+
+.gara-info span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* ================= HERO GARE BACKGROUND ================= */
+.gare-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* immagine sfondo */
+.gare-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url("img/hero4.jpg") center/cover no-repeat;
+    filter: brightness(0.5);
+    transform: scale(1.05);
+}
+
+/* overlay nero elegante */
+.gare-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.95));
+}
+
+/* contenuto sopra tutto */
+.gare-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.gare-hero h1 {
+    font-size: 70px;
+    color: #00f7ff;
+    letter-spacing: 4px;
+}
+
+.gare-hero p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ================= DESCRIZIONE GARE ================= */
+/* ================= DESCRIZIONI GARE PREMIUM ================= */
+.gara-description {
+    max-width: 800px;
+    margin: 30px auto 60px auto;
+
+    font-size: 16px;
+    line-height: 1.9;
+    color: #cfcfcf;
+
+    text-align: justify;
+
+    padding: 0 10px;
+
+    border-left: 2px solid rgba(0,247,255,0.3);
+    padding-left: 18px;
+
+    position: relative;
+}
+
+/* prima riga più forte (titolo dentro testo) */
+.gara-description::first-line {
+    font-weight: 600;
+    color: #ffffff;
+}
+/* ================= SCARPE HERO ================= */
+.scarpe-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.scarpe-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url("img/scarpehero.jpg") center/cover no-repeat;
+    filter: brightness(0.5);
+    transform: scale(1.05);
+}
+
+.scarpe-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.95));
+}
+
+.scarpe-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.scarpe-hero h1 {
+    font-size: 70px;
+    color: #00f7ff;
+    letter-spacing: 4px;
+}
+
+.scarpe-hero p {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* ================= INTRO ================= */
+.intro-text {
+    max-width: 850px;
+    margin: 30px auto 50px auto;
+
+    line-height: 1.9;
+    color: #cfcfcf;
+
+    text-align: justify;
+
+    border-left: 2px solid rgba(0,247,255,0.3);
+    
+
+    padding: 0 18px;
+}
+
+/* ================= SEZIONE SCARPE ================= */
+.shoe-section {
+    padding: 120px 60px;
+}
+
+/* TITOLO (uguale a gare) */
+.shoe-section .section-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.shoe-section .section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    margin-top: 12px;
+    background: #00f7ff;
+}
+
+/* ================= DESCRIZIONE ================= */
+.shoe-description {
+    max-width: 850px;
+    margin: 30px auto 50px auto;
+
+    line-height: 1.9;
+    color: #cfcfcf;
+
+    text-align: justify;
+
+    border-left: 2px solid rgba(0,247,255,0.3);
+    padding-left: 18px;
+}
+
+/* ================= GALLERY ================= */
+.shoe-gallery {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* CARD (equilibrata) */
+.shoe-card {
+    flex: 1;
+    min-width: 280px;
+    height: 350px;
+
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+
+    transition: 0.4s;
+}
+
+.shoe-card:hover {
+    transform: scale(1.03);
+}
+
+.shoe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+/* OVERLAY */
+.shoe-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 18px;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+
+.shoe-overlay p {
+    font-size: 16px;
+    color: #00f7ff;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    /* NAVBAR */
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    /* HERO */
+    .hero h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .hero p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* SEZIONI GENERICHE */
+    section {
+        padding: 100px 20px;
+    }
+
+    /* SIGNIFICATO → DIVENTA VERTICALE */
+    .meaning-section {
+        flex-direction: column;
+    }
+
+    .meaning-left,
+    .meaning-right {
+        width: 100%;
+    }
+
+    .meaning-text {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    /* SHOES → STACK */
+    .shoes-section {
+        flex-direction: column;
+    }
+
+    .shoes-left,
+    .shoes-right {
+        width: 100%;
+    }
+
+    .shoes-quote {
+        margin-top: 40px;
+    }
+
+    /* CARD PIÙ PICCOLE */
+    .shoe-card {
+        height: 200px;
+    }
+
+    /* RECORD SCROLL */
+    .record-card {
+        min-width: 260px;
+        height: 200px;
+    }
+}
